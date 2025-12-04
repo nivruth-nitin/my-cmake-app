@@ -1,8 +1,19 @@
-#ifndef STRING_UTILS_H
-#define STRING_UTILS_H
+#include "string_utils.h"
+#include <stdio.h>
+#include <ctype.h>
 
-// Function declarations
-int string_length(const char* str);
-void print_uppercase(const char* str);
+int string_length(const char* str) {
+    int length = 0;
+    while (str[length] != '\0') {
+        length++;
+    }
+    return length;
+}
 
-#endif // STRING_UTILS_H
+void print_uppercase(const char* str) {
+    while (*str) {
+        putchar(toupper(*str));
+        str++;
+    }
+    putchar('\n');
+}
