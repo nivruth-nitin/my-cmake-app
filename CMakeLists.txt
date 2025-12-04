@@ -36,10 +36,7 @@ set(HEADERS
 )
 
 # Create executable
-add_executable(myapp ${SOURCES} ${HEADERS})
-
-# Link math library (required on some platforms for math.h functions)
-target_link_libraries(myapp PRIVATE m)
+add_executable(myapp ${SOURCES} "string_utils.h")
 
 # Installation rules
 install(TARGETS myapp DESTINATION bin)
